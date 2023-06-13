@@ -10,11 +10,13 @@ const todo = reactive({
 const addTodo = (e) => {
     if (todo.value !== null) {
         emit("create-todo", todo.value)
+        todo.value = null
     }
     todo.invalid = true
     todo.errMsg = "No has escrito ninguna tarea!"
 }
 </script>
+
 <template>
     <form @submit.prevent="addTodo">
         <label>Crear tarea nueva</label>
@@ -49,5 +51,10 @@ const addTodo = (e) => {
     border-style: none;
     border-radius: 4px;
     background-color: $green-main;
+
+    &:hover {
+        transition: all ease-in-out 200ms;
+        color: white;
+    }
 }
 </style>

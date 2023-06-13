@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is oaa</h1>
+    <h1>Se realizará cuando aprenda algun state manager</h1>
   </div>
 </template>
 
@@ -11,5 +11,11 @@
     display: flex;
     align-items: center;
   }
+
+}
+
+h1 {
+  text-align: center;
+
 }
 </style>

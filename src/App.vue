@@ -4,22 +4,23 @@ import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
-  <header>
-    <NavBar />
+  <NavBar />
+  <div class="nav-links">
     <div class="wrapper">
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Tareas</RouterLink>
+        <RouterLink to="/todosDone">Completas</RouterLink>
       </nav>
     </div>
-  </header>
-
-  <RouterView />
+  </div>
+  <div class="content-container">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
-header {
+.nav-links {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -51,27 +52,18 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
   nav {
-    text-align: left;
+    text-align: center;
     margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.content-container {
+  display: flex;
+  place-items: center;
 }
 </style>

@@ -10,12 +10,12 @@ const router = createRouter({
       component: Todos
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/todosDone',
+      name: 'todosDone',
       // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
+      // this generates a separate chunk (TodosDone.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/TodosDoneView.vue')
     }
   ]
 })
